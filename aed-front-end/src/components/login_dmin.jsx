@@ -1,5 +1,5 @@
 import React from 'react'; 
-import './styles/login_admin.css';
+import '../styles/login_admin.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const LoginAdmin = () => {

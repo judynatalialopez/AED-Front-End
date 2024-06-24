@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Footer.css'; // Asegúrate de crear este archivo para estilos personalizados
+import '../styles/Footer.css'; // Asegúrate de crear este archivo para estilos personalizados
 import logo from '../assets/icono_pie_pagina.jpeg';
 
 const Footer = () => {
