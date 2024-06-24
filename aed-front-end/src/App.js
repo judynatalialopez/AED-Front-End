@@ -1,10 +1,10 @@
 import './App.css';
-import LoginAdmin from './components/login_dmin';  // Asegúrate de que la carpeta se llama 'components' y el archivo 'LoginAdmin.js'
+import LoginUser from './components/login_user';  // Asegúrate de que la carpeta se llama 'components' y el archivo 'LoginAdmin.js'
 
 function App() {
   return (
     <div>
-      <LoginAdmin />
+      <LoginUser />
     </div>
   );
 }
