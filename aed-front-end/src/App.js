@@ -1,10 +1,11 @@
+import React from 'react';
 import './App.css';
-import LoginAdmin from './components/login_dmin';  // Asegúrate de que la carpeta se llama 'components' y el archivo 'LoginAdmin.js'
+import Index from './components/index';
 
 function App() {
   return (
     <div>
-      <LoginAdmin />
+      <Index />
     </div>
   );
 }

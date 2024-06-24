@@ -1,8 +1,12 @@
-import React from "react";
+import React from 'react';
+import Footer from './footer';
 
 const Index = () => {
   return (
-    <div>estas es el index</div>
+    <div>
+      <div>esta es el index</div>
+      <Footer />
+    </div>
   );
 };
 

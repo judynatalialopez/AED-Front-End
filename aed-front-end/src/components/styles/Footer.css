@@ -1,0 +1,57 @@
+/* Footer.css */
+.footer {
+    background-color: #67BB7E;
+    color: #fff;
+    padding: 20px 0; /* Añade padding solo arriba y abajo */
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer-content {
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo del contenido del footer */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column; /* Ajusta a columna en pantallas pequeñas */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 0 20px; /* Añade padding a los lados para separar el contenido del borde */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+  
+  .footer-left, .footer-right {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 10px; /* Añade espacio entre los elementos */
+  }
+  
+  .footer-image {
+    max-width: 110px;
+    height: auto;
+  }
+  
+  .footer-right p {
+    margin: 5px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row; /* Ajusta a fila en pantallas más grandes */
+      justify-content: space-between; /* Espaciado entre los elementos */
+      align-items: center; /* Centra verticalmente */
+      text-align: left; /* Alinea el texto a la izquierda en pantallas grandes */
+    }
+  
+    .footer-left, .footer-right {
+      width: auto; /* Vuelve al ancho automático para alinear correctamente */
+      margin-bottom: 0; /* Elimina el espacio entre los elementos */
+      text-align: left; /* Alinea el texto a la izquierda en pantallas grandes */
+    }
+  
+    .footer-image {
+      max-width: 110px; /* Tamaño de la imagen */
+      height: auto; /* Altura automática según el ancho */
+      margin-right: 20px; /* Espacio entre la imagen y el texto */
+    }
+  }
