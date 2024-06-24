@@ -8,11 +8,11 @@ const LoginAdmin = () => {
         <form action="">
             <h1>Login</h1>
             <div className="input-box">
-               <input type="text" placeholder="correo" required /> 
+               <input type="text" placeholder='correo' required /> 
                <FaUser className='icon'/>
             </div>
             <div className="input-box">
-               <input type="password" placeholder="contraseña" required /> 
+               <input type="password" placeholder='contraseña' required /> 
                <FaLock className='icon' />
             </div>
 
