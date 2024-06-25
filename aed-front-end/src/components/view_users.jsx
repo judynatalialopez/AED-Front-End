@@ -105,56 +105,96 @@ function ViewUsers() {
                     }}
                     className="form-control" placeholder="Primer Nombre" aria-label="Username" aria-describedby="basic-addon1"/>
                 </div>
-                <label>Segundo Nombre: <input 
-                onChange={(event) => {
-                    setSegundoNombre(event.target.value);
-                }}
-                type="text" value={segundoNombre} /></label> 
-                <label>Primer Apellido: <input 
-                onChange={(event) => {
-                    setPrimerApellido(event.target.value);
-                }}
-                type="text" value={primerApellido} /></label> 
-                <label>Segundo Apellido: <input 
-                onChange={(event) => {
-                    setSegundoApellido(event.target.value);
-                }}
-                type="text" value={segundoApellido} /></label>              
-                <label>Email: <input 
-                onChange={(event) => {
-                    setEmail(event.target.value);
-                }}
-                type="email" value={email} /></label> 
-                <label>Fecha De Nacimiento: <input 
-                onChange={(event) => {
-                    setFechaDeNacimiento(event.target.value);
-                }}
-                type="date" value={fechaDeNacimiento} /></label> 
-                <label>Direccion: <input 
-                onChange={(event) => {
-                    setDireccion(event.target.value);
-                }}
-                type="text" value={direccion} /></label> 
-                <label>Telefono: <input
-                onChange={(event) => {
-                    setTelefono(event.target.value);
-                }}
-                type="number" value={telefono} /></label> 
-                <label>Numero De Cuenta: <input 
-                onChange={(event) => {
-                    setNumeroDeCuenta(event.target.value);
-                }}
-                type="number" value={numeroDeCuenta} /></label> 
-                <label>Contraseña: <input 
-                onChange={(event) => {
-                    setContrasena(event.target.value);
-                }}
-                type="password" value={contrasena} /></label>
-                <label>Estado: <input 
-                onChange={(event) => {
+
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Segundo Nombre</span>
+                    <input type="text" 
+                    onChange={(event) => {
+                        setSegundoNombre(event.target.value);
+                    }}
+                    className="form-control" placeholder="Segundo Nombre" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+                
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Primer Apellido</span>
+                    <input type="text" 
+                    onChange={(event) => {
+                        setPrimerApellido(event.target.value);
+                    }}
+                    className="form-control" placeholder="Primer Apellido" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+                
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Segundo Apellido</span>
+                    <input type="text" 
+                    onChange={(event) => {
+                        setSegundoApellido(event.target.value);
+                    }}
+                    className="form-control" placeholder="Segundo Apellido" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Email</span>
+                    <input type="text" 
+                    onChange={(event) => {
+                        setEmail(event.target.value);
+                    }}
+                    className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Fecha De Nacimiento</span>
+                    <input type="date" 
+                    onChange={(event) => {
+                        setFechaDeNacimiento(event.target.value);
+                    }}
+                    className="form-control" placeholder="Fecha De Nacimiento" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+                
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Direccion</span>
+                    <input type="text" 
+                    onChange={(event) => {
+                        setDireccion(event.target.value);
+                    }}
+                    className="form-control" placeholder="Direccion" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+               
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Telefono</span>
+                    <input type="number" 
+                    onChange={(event) => {
+                        setTelefono(event.target.value);
+                    }}
+                    className="form-control" placeholder="Telefono" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+                
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Numero De Cuenta</span>
+                    <input type="number" 
+                    onChange={(event) => {
+                        setNumeroDeCuenta(event.target.value);
+                    }}
+                    className="form-control" placeholder="Numero De Cuenta" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Estado</span>
+                    <input type="number" 
+                   onChange={(event) => {
                     setEstado(event.target.value);
                 }}
-                type="text" value={estado} /></label>  
+                    className="form-control" placeholder="Estado" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>
+                 
+                <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">Contraseña</span>
+                    <input type="password" 
+                   onChange={(event) => {
+                    setContrasena(event.target.value);
+                }}
+                    className="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1"/>
+                </div>                
                 
             </div>
                 
@@ -162,6 +202,11 @@ function ViewUsers() {
                 <button className='btn btn-success' onClick={add}>Registrar</button>
                 </div>
             </div>
+
+            <table class="table table-striped">
+                ...
+                </table>
+
 
         </div> 
     );

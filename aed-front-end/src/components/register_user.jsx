@@ -4,10 +4,8 @@ import { FaUser, FaLock, FaPhoneAlt, FaMoneyCheckAlt, FaAddressBook } from 'reac
 import { HiIdentification } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { BsFillCalendarDateFill } from 'react-icons/bs';
-import { GiMatterStates } from "react-icons/gi";
 
 const RegisterUser = () => {
-
     const [numeroDeCedula, setNumeroDeCedula] = useState("");
     const [primerNombre, setPrimerNombre] = useState("");
     const [segundoNombre, setSegundoNombre] = useState("");
@@ -19,7 +17,6 @@ const RegisterUser = () => {
     const [telefono, setTelefono] = useState("");
     const [numeroDeCuenta, setNumeroDeCuenta] = useState("");
     const [contrasena, setContrasena] = useState("");
-    const [estado, setEstado] = useState("");
 
     const add = (event) => {
         event.preventDefault();
@@ -40,7 +37,7 @@ const RegisterUser = () => {
                 Telefono: telefono,
                 Numero_de_Cuenta_Ahorro: numeroDeCuenta,
                 Contrasena: contrasena,
-                Estado: estado
+                Estado: 1 // Estado activo por defecto
             })
         }).then(response => {
             if (response.ok) {
@@ -115,13 +112,7 @@ const RegisterUser = () => {
                 <div className="input-box">
                     <input onChange={(event) => setFechaDeNacimiento(event.target.value)}
                         type="date" placeholder='Fecha De Nacimiento' required />
-                    <date className='icon' />
-                </div>
-
-                <div className="input-box">
-                    <input onChange={(event) => setEstado(event.target.value)}
-                        type="text" placeholder='Estado' />
-                    <GiMatterStates className='icon' />
+                    <BsFillCalendarDateFill className='icon' />
                 </div>
 
                 <div className="input-box">
