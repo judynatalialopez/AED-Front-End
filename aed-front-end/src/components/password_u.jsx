@@ -78,7 +78,7 @@ const Update_Password_u = () => {
 
                 <div className="register-link">
                     <p>
-                        ¿Quiere volver al inicio? <a href="#">Volver al inicio</a>
+                        ¿Quiere volver al inicio? <a href="/">Volver al inicio</a>
                     </p>
                 </div>
             </form>

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Asegúrate de importar useNavigate
 import '../styles/login_user.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const LoginUser = () => {
-  const [email, setEmail] = useState(""); // Utiliza 'email' en vez de 'Email'
-  const [contrasena, setContrasena] = useState(""); // Utiliza 'contrasena' en vez de 'Contrasena'
+  const [email, setEmail] = useState("");
+  const [contrasena, setContrasena] = useState("");
+  const navigate = useNavigate(); // Asegúrate de definir navigate
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,17 +17,24 @@ const LoginUser = () => {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          Email: email, // Utiliza 'email' en vez de 'Email'
-          Contrasena: contrasena, // Utiliza 'contrasena' en vez de 'Contrasena'
+          Email: email,
+          Contrasena: contrasena,
         })
       });
 
       if (response.ok) {
         const data = await response.json();
         alert("Inicio de sesión exitoso");
-        // Aquí podrías redirigir al usuario si es necesario
+        navigate('/Inicio'); // Redirige a la página de inicio
       } else {
-        alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
+        const errorData = await response.json();
+        if (errorData.message === 'usuario no encontrado') {
+          alert("Usuario no encontrado. Por favor, inténtalo de nuevo.");
+        } else if (errorData.message === 'Contraseña incorrecta') {
+          alert("Contraseña incorrecta. Por favor, inténtalo de nuevo.");
+        } else {
+          alert("Error al iniciar sesión. Por favor, inténtalo de nuevo.");
+        }
       }
     } catch (error) {
       console.error("Error:", error);
@@ -59,11 +68,15 @@ const LoginUser = () => {
         </div>
 
         <div className="remember-forgot">
-          <a href='#'>¿Olvidó su contraseña?</a>
+          <a href='/Contraseña'>¿Olvidó su contraseña?</a>
         </div>
 
         <button type="submit">Ingresar</button>
       </form>
+     <br />
+      <div className='remember-forgot'>
+          <p>¿Todavia no tienes cuenta? <a href="/Registro">Ir a crearla</a></p>
+        </div>
     </div>
   );
 };

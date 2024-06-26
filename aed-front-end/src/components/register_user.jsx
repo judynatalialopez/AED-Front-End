@@ -52,79 +52,79 @@ const RegisterUser = () => {
     };
 
     return (
-        <div className="wrapper">
+        <div className="wrapper-02">
             <form onSubmit={add}>
                 <h1>Registro</h1>
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setNumeroDeCedula(event.target.value)}
                         type="number" placeholder='Numero de Cedula' required />
                     <HiIdentification className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setPrimerNombre(event.target.value)}
                         type="text" placeholder='Primer Nombre' required />
                     <FaUser className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setSegundoNombre(event.target.value)}
                         type="text" placeholder='Segundo Nombre' required />
                     <FaUser className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setPrimerApellido(event.target.value)}
                         type="text" placeholder='Primer Apellido' required />
                     <FaUser className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setSegundoApellido(event.target.value)}
                         type="text" placeholder='Segundo Apellido' required />
                     <FaUser className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setTelefono(event.target.value)}
                         type="number" placeholder='Telefono' required />
                     <FaPhoneAlt className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setEmail(event.target.value)}
                         type="email" placeholder='Correo Electronico' required />
                     <MdEmail className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setNumeroDeCuenta(event.target.value)}
                         type="number" placeholder='Numero De Cuenta Ahorros' required />
                     <FaMoneyCheckAlt className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setDireccion(event.target.value)}
                         type="text" placeholder='Direccion' required />
                     <FaAddressBook className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setFechaDeNacimiento(event.target.value)}
                         type="date" placeholder='Fecha De Nacimiento' required />
                     <BsFillCalendarDateFill className='icon' />
                 </div>
 
-                <div className="input-box">
+                <div className="input-box-02">
                     <input onChange={(event) => setContrasena(event.target.value)}
                         type="password" placeholder='Contraseña' required />
                     <FaLock className='icon' />
                 </div>
 
-                <button type="submit">Crear Cuenta</button>
+                <button type="submit-02">Crear Cuenta</button>
 
-                <div className='register-link'>
-                    <p>¿Quiere volver al inicio? <a href="#">Volver al inicio</a></p>
+                <div className='register-link-02'>
+                    <p>¿Quiere volver al inicio? <a href="/">Volver al inicio</a></p>
                 </div>
             </form>
         </div>
