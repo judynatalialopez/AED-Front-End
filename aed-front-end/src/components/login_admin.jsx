@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import '../styles/login_admin.css';
+import { useNavigate } from 'react-router-dom';
+import '../styles/login_user.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const LoginAdmin = () => {
+  const navigate = useNavigate(); // Importante: asegúrate de importar useNavigate correctamente
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
 
@@ -23,7 +25,7 @@ const LoginAdmin = () => {
       if (response.ok) {
         const data = await response.json();
         alert("Inicio de sesión exitoso");
-        // Aquí podrías redirigir al usuario si es necesario
+        navigate('/Crud_subsidies'); // Redirige a la página de inicio
       } else {
         alert("Credenciales incorrectas. Por favor, inténtalo de nuevo.");
       }
@@ -36,7 +38,7 @@ const LoginAdmin = () => {
   return (
     <div className="wrapper">
       <form onSubmit={handleSubmit}>
-        <h1>Iniciar Sesión</h1>
+        <h1>Iniciar Sesión Administrador</h1>
         <div className="input-box">
           <input
             type="text"
@@ -59,10 +61,14 @@ const LoginAdmin = () => {
         </div>
 
         <div className="remember-forgot">
-          <a href='#'>¿Olvidó su contraseña?</a>
+          <a href='/Contraseña'>¿Olvidó su contraseña?</a>
         </div>
-
         <button type="submit">Ingresar</button>
+             <br />
+             <br />
+      <div className='remember-forgot'>
+          <p><a href="/">Volver al inicio</a></p>
+        </div>
       </form>
     </div>
   );

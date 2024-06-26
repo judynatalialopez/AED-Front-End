@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Asegúrate de importar useNavigate
+import { useNavigate } from 'react-router-dom';
 import '../styles/login_user.css';
 import { FaUser, FaLock } from 'react-icons/fa';
 
 const LoginUser = () => {
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
-  const navigate = useNavigate(); // Asegúrate de definir navigate
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,7 +25,7 @@ const LoginUser = () => {
       if (response.ok) {
         const data = await response.json();
         alert("Inicio de sesión exitoso");
-        navigate('/Inicio'); // Redirige a la página de inicio
+        navigate(`/Subsidies/${encodeURIComponent(email)}`); // Redirige a Subsidies con el email en la URL
       } else {
         const errorData = await response.json();
         if (errorData.message === 'usuario no encontrado') {
@@ -75,7 +75,11 @@ const LoginUser = () => {
       </form>
      <br />
       <div className='remember-forgot'>
-          <p>¿Todavia no tienes cuenta? <a href="/Registro">Ir a crearla</a></p>
+          <p>¿Todavía no tienes cuenta? <a href="/Registro">Ir a crearla</a></p>
+        </div>
+
+        <div className='remember-forgot'>
+          <p>¿Quiere Ingresar Como Administrador? <a href="/Administrador">Ingresar</a></p>
         </div>
     </div>
   );

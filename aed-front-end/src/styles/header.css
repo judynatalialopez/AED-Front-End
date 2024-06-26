@@ -1,0 +1,17 @@
+.header-container {
+  background-color: #FFFFFF; /* Fondo blanco */
+  height: 110px; /* Altura deseada del encabezado */
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  padding: 0 20px; /* Espaciado interno */
+}
+
+.logo-container {
+  flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.logo-img {
+  max-width: 200px; /* Ajusta el tamaño máximo del logo */
+  height: auto; /* Mantiene la proporción */
+  margin-left: 20px; /* Espacio a la izquierda del logo */
+}
