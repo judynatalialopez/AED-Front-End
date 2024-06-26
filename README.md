@@ -4,6 +4,7 @@
 
 - npm install react-scripts
 - npm install axios
+- npm install react-scroll
 - npm install react-router-dom
 - npm install
 
